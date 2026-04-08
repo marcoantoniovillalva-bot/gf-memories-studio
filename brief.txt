@@ -1,0 +1,188 @@
+# BRIEF CLIENTE
+# Compila quello che sai, lascia vuoto il resto
+# Claude leggerà questo file automaticamente
+
+# --- BUSINESS ---
+Nome:CF Memories Studio
+Settore:Fotografia
+Descrizione:Tecnologia e creatività per trasformare ogni momento in immagini di qualità cinematografica.
+Indirizzo:Via Luigi Goia, 31, 27036 Mortara PV
+Cellulare:3272984490
+Telefono:
+Email:info@CfStudio.com
+Partita IVA:
+Orario: 
+
+
+# --- ONLINE ---
+Sito attuale:
+Google Business:https://share.google/6YEpDPXKFmJpOiou7
+Instagram:
+Facebook:
+LinkedIn:
+YouTube:
+TikTok:
+WhatsApp Business: 
+
+# --- BRAND ---
+Colori: #51718A #FFFFFF #DFCF86  (puoi usare anche altri colori ma l'importante è che si abbinino a questi colori principali)
+Font: Font serif elegante,
+Font script calligrafico elegante 
+Regole tipografiche
+Titoli principali e titoli servizi → serif
+Frasi emozionali, accenti, parole chiave, eventuale USP parziale → script
+Bottoni CTA, testo descrittivo, menu, footer → sans-serif
+Non abusare del font script: usarlo con moderazione per mantenere eleganza e leggibilità
+
+Stile: Mantenere sempre una percezione luxury, pulita e fotografica con amimazioni svg e micro animazioni css/ui, scroll animation, paralax leggero, video backgroud sezione hero, lottie animation, transazioni di pagina motion sulle immagini
+Tono di voce: Elegante, emotivo e sicuro (premium ma accessibile)
+
+# --- CONTENUTI ---
+Tagline:
+CTA principale: Contattaci
+Servizi/Prodotti principali: Fotografia all’aperto, Ritratti e book in studio, Fotografia per animali
+Target cliente ideale:
+USP (cosa li differenzia): Uniamo attrezzature di ultima generazione, riprese anche con drone e un approccio naturale, per creare immagini autentiche, curate e di qualità cinematografica.
+
+# --- RECENSIONI (copia/incolla le migliori) ---
+Recensione 1: 
+Recensione 2: 
+Recensione 3: 
+Rating Google: 
+
+# --- OBIETTIVO PROGETTO ---
+Obiettivo: Far percepire valore alto e filtrare i clienti giusti e spingere al contatto (WhatsApp)
+Timeline:
+Budget servizi terzi:
+Gestione autonoma contenuti: no
+
+# --- INTEGRAZIONI NECESSARIE ---
+Google Maps sul sito: sì
+Pagamenti online: no
+Email marketing: no
+Sistema prenotazioni:no
+Chat sul sito: bottone flottante di whataspp (usa il link: https://wa.link/yflhc8 )
+Feed Instagram:no
+Google Analytics: sì
+
+# --- NOTE LIBERE ---
+Il sito è solo in lingua italiana e gestisci le politiche relative ai cockie e alla privacy d'accordo con la egge italiana. queste sono alcune recensioni valide:
+Crea un mini sito premium mobile-first per un brand fotografico chiamato GF Memories Studio, composto da:
+
+Homepage / funnel hub premium
+Landing page servizio: Fotografia all’aperto
+Landing page servizio: Fotografia in studio
+Landing page servizio: Fotografia animali
+
+L’obiettivo è creare un’esperienza visivamente premium, elegante e ad alta conversione, con forte coerenza tra branding, tipografia, palette colori, hero video e pagine dedicate ai servizi.
+La homepage deve funzionare come una bio landing premium / homepage hub.
+
+Requisito critico della prima schermata su mobile
+
+Nella prima viewport mobile, senza scroll iniziale, devono essere visibili chiaramente:
+
+logo  (il logo lo puoi trovare con il nome di "logo" nella cartella C:\Users\Villalva\Desktop\Marketizzati definitifo\GF memories studio) (Logo centrato in alto
+video hero (Video MP4 full-width
+autoplay
+muted
+loop
+playsinline
+ottimizzato per mobile in modo che il caricamento della pagina e del video sia veloce e dentro e resposive mobile se necessario comprimi il video
+altezza consigliata su mobile: circa 60–70vh
+il video deve rimanere ben visibile e non coperto dagli elementi UI, il video si chiama "video hero" e si trova nella cartella C:\Users\Villalva\Desktop\Marketizzati definitifo\GF memories studio)
+USP breve e leggibile
+CTA primaria "Contattaci" (collegata a WhatsApp) 
+CTA secondaria "Scopri i servizi" (scroll automatico alla sezione servizi)
+
+Questo requisito vale solo per la hero iniziale.
+Nessun elemento chiave della hero deve richiedere scroll per essere visto su mobile
+La USP deve essere corta: massimo 1–2 righe
+I bottoni devono essere ben visibili ma non troppo grandi
+Gerarchia visiva:
+video
+CTA
+USP
+logo
+
+BOTTONE WHATSAPP FLOTTANTE
+Bottone fisso in basso a destra
+Sempre visibile
+Non invasivo
+Stile coerente con il design premium del sito
+
+Sotto la hero deve esserci una sezione con 3 card servizi:
+
+Fotografia all’aperto (la foto relativa si chiama "fotografia aperto") ,
+Ritratti e book in studio (la foto relativa si chiama "fotografia studio") ,
+Fotografia per animali (la foto relativa si chiama "fotografia cane e gatto")
+
+
+note: le foto relative a ciascuna sezione le puoi trovare sempre nela cartella C:\Users\Villalva\Desktop\Marketizzati definitifo\GF memories studio
+
+Le card non devono essere gigantesche e non devono occupare una viewport intera ciascuna nella versione mobile, Shadow morbida (floating effect) per dare profondità, angoli arrotondati eleganti effetto premium, lusso moderno
+
+L’obiettivo è far stare tutta la sezione servizi in una sola schermata mobile
+
+la sezione deve essere rapidamente scansionabile
+su mobile non si deve assolutamnte fare uno scroll lungo per ogni singola card
+
+Card compatte, premium, eleganti devi trovare un sistema per far si che le scritte non vengano opaciazzate ad esempio un idea potrebbe essere aggiungere un elemento CTA flottante (es. “Fotografia all'aperto”, “Ritratti e book in studio”, "Fotografia per animali")
+Il CTA potrebbe essere:
+Essere posizionato in basso a destra
+Uscire leggermente dalla card (offset / layered effect)
+
+L’intera card deve essere cliccabile
+Ogni card deve reindirizzare alla rispettiva landing page dedicata:
+/fotografia-allaperto
+/fotografia-studio
+/fotografia-animali
+
+sezione chi siamo (deve essere breve e persuasiva, Sono la famiglia Frunza e lui si occupa della fotografia e lei della postproduzione, la foto inerente è "chi siamo" e si trova sempre nella cartella C:\Users\Villalva\Desktop\Marketizzati definitifo\GF memories studio)
+
+Footer professionale con:
+
+Privacy Policy
+Cookie Policy
+Copyright
+eventuali contatti
+
+Ogni servizio deve avere una landing page dedicata, visivamente coerente con la homepage ma più focalizzata sul singolo servizio.
+
+Pagine richieste
+/fotografia-allaperto
+/fotografia-studio
+/fotografia-animali
+
+Ogni landing deve:
+
+approfondire il singolo servizio
+rafforzare la percezione premium
+mostrare immagini coerenti con il servizio
+accompagnare l’utente verso il contatto finale
+
+ogni landing deve vere un copy semplice ma persuasivo, meno parole e piu immagini, deve mantenere la brand identity luxury fotografico ma ogni landing deve comunicare: 
+
+Fotografia all’aperto
+La landing deve comunicare:
+naturalezza
+luce naturale
+spontaneità
+emozione autentica.
+
+Fotografia in studio
+La landing deve comunicare:
+controllo della luce
+eleganza
+precisione
+ritratti curati e professionali
+
+Fotografia animali
+La landing deve comunicare:
+sensibilità verso cani e gatti
+pazienza
+autenticità
+valorizzazione del carattere dell’animale
+
+
+per quanto riguarda la parte possono servirti le keyword che si trovano nel file "keyword_fotografo" nella cartella C:\Users\Villalva\Desktop\Marketizzati definitifo\GF memories studio
+per vol sta ad indicare in quel file il numero di ricerche al mese di quella keyword su google, per per cpc significa costo per click medio se vuoi che google mostri il tuo sito come annuncio, per sd significa concorrenza stimata per la ricerca organica, pd è la concorrenza stimata per la ricerca a pagamento

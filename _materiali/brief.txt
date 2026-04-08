@@ -1,0 +1,58 @@
+# BRIEF CLIENTE
+# Compila quello che sai, lascia vuoto il resto
+# Claude leggerà questo file automaticamente
+
+# --- BUSINESS ---
+Nome:
+Settore:
+Descrizione:
+Indirizzo:
+Telefono:
+Email:
+Partita IVA:
+
+# --- ONLINE ---
+Sito attuale:
+Google Business:
+Instagram:
+Facebook:
+LinkedIn:
+YouTube:
+TikTok:
+WhatsApp Business:
+
+# --- BRAND ---
+Colori: (es. blu #1A73E8, bianco #FFFFFF)
+Font: (es. Montserrat, lascia vuoto se non lo sai)
+Stile: (es. moderno, classico, minimal, lusso, giovane)
+Tono di voce: (es. formale, amichevole, tecnico)
+
+# --- CONTENUTI ---
+Tagline:
+CTA principale: (es. Prenota ora, Richiedi preventivo, Acquista)
+Servizi/Prodotti principali:
+Target cliente ideale:
+USP (cosa li differenzia):
+
+# --- RECENSIONI (copia/incolla le migliori) ---
+Recensione 1: "" — Nome
+Recensione 2: "" — Nome
+Recensione 3: "" — Nome
+Rating Google: stelle / N recensioni
+
+# --- OBIETTIVO PROGETTO ---
+Obiettivo: (es. generare lead, vendere online, brand awareness)
+Timeline:
+Budget servizi terzi:
+Gestione autonoma contenuti: sì / no
+
+# --- INTEGRAZIONI NECESSARIE ---
+Google Maps sul sito: sì / no
+Pagamenti online: sì / no → provider: Stripe / Polar / altro
+Email marketing: sì / no → provider:
+Sistema prenotazioni: sì / no → Calendly o altro:
+Chat sul sito: sì / no
+Feed Instagram: sì / no
+Google Analytics: sì / no
+
+# --- NOTE LIBERE ---
