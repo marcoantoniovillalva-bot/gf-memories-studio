@@ -19,6 +19,12 @@ const data: LandingPageData = {
     body: "Non c'è studio che possa eguagliare il calore del sole al tramonto o la morbidezza di una giornata nuvolosa. La fotografia outdoor coglie la luce vera — e trasforma momenti ordinari in immagini che restano. Ritratti romantici, sessioni di famiglia, book in contesti suggestivi: siamo lì con te.",
   },
 
+  features: [
+    { label: 'Luce Naturale', desc: 'Golden hour, nuvole morbide, colori autentici — la luce che nessuno studio può replicare.' },
+    { label: 'Location su Misura', desc: 'Campi dorati, borghi storici, riva del fiume — scegliamo insieme il posto perfetto.' },
+    { label: 'Drone Certificato', desc: 'Prospettive aeree uniche che trasformano ogni paesaggio in qualcosa di straordinario.' },
+  ],
+
   gallery: [
     { src: '/images/fotografia-aperto.jpeg', alt: "Ritratto all'aperto con luce naturale" },
     { src: '/images/fotografia-bacio-cane-donna.jpeg', alt: 'Coppia con cane outdoor' },

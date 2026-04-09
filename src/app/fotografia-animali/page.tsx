@@ -19,6 +19,12 @@ const data: LandingPageData = {
     body: "Gli animali domestici fanno parte della famiglia. Le loro espressioni, i loro gesti, il carattere unico meritano di essere immortalati con la stessa cura dei ritratti umani. Lavoriamo con calma, rispettando i tempi di ogni animale, per ottenere foto vere e cariche di personalità.",
   },
 
+  features: [
+    { label: 'Nessuna Forzatura', desc: 'Rispettiamo i loro tempi. Li lasciamo esplorare finché si sentono a casa.' },
+    { label: 'Indoor & Outdoor', desc: 'In studio o all\'aperto — scegliamo l\'ambiente dove il tuo animale è più felice.' },
+    { label: 'Carattere Immortalato', desc: 'Ogni scatto racconta la loro personalità unica: vivace, tenera o imprevedibile.' },
+  ],
+
   gallery: [
     { src: '/images/fotografia-cane.jpeg', alt: 'Ritratto cane professionale' },
     { src: '/images/fotografia-cane-gatto.jpeg', alt: 'Foto cane e gatto insieme' },

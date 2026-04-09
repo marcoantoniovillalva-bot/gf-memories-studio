@@ -33,6 +33,7 @@ export interface LandingPageData {
   heroImageAlt: string
   /* Content */
   intro: { heading: string; body: string }
+  features: { label: string; desc: string }[]
   process?: { step: string; label: string; desc: string }[]
   gallery: GalleryImage[]
   about: { heading: string; body: string; image: string; imageAlt: string }
@@ -49,9 +50,8 @@ export interface LandingPageData {
 function ServiceHero({ data }: { data: LandingPageData }) {
   return (
     <section
-      className="relative overflow-hidden bg-brand-text-dark"
+      className="service-hero-section relative overflow-hidden bg-brand-text-dark"
       aria-label={`Hero — ${data.title}`}
-      style={{ height: '100svh', minHeight: '520px' }}
     >
       <Image
         src={data.heroImage}
@@ -66,7 +66,7 @@ function ServiceHero({ data }: { data: LandingPageData }) {
         style={{ background: 'linear-gradient(to bottom, rgba(25,38,51,0.55) 0%, rgba(0,0,0,0.15) 45%, rgba(26,26,26,0.72) 100%)' }} />
 
       {/* Back */}
-      <div className="absolute z-10" style={{ top: '84px', left: '20px' }}>
+      <div className="absolute z-20" style={{ top: '84px', left: '20px' }}>
         <Link href="/" className="inline-flex items-center gap-1.5 font-sans text-[10px] uppercase tracking-[0.16em] text-white/70 hover:text-white transition-colors">
           <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
             <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
@@ -104,14 +104,46 @@ function ServiceHero({ data }: { data: LandingPageData }) {
 function IntroSection({ data }: { data: LandingPageData }) {
   return (
     <section id="intro" className="bg-brand-off-white section-padding" aria-label="Introduzione">
-      <div className="container-site max-w-2xl text-center mx-auto reveal">
-        <span className="line-gold mb-6 block mx-auto" aria-hidden="true" />
-        <h2 className="font-serif font-semibold text-brand-text-dark mb-4" style={{ fontSize: 'clamp(1.5rem, 3.5vw, 2.2rem)' }}>
-          {data.intro.heading}
-        </h2>
-        <p className="font-sans text-brand-text-mid text-base leading-relaxed">
-          {data.intro.body}
-        </p>
+      <div className="container-site">
+        {/* Heading + body */}
+        <div className="max-w-2xl text-center mx-auto reveal">
+          <span className="line-gold mb-6 block mx-auto" aria-hidden="true" />
+          <h2 className="font-serif font-semibold text-brand-text-dark mb-4" style={{ fontSize: 'clamp(1.5rem, 3.5vw, 2.2rem)' }}>
+            {data.intro.heading}
+          </h2>
+          <p className="font-sans text-brand-text-mid text-sm md:text-base leading-relaxed">
+            {data.intro.body}
+          </p>
+        </div>
+
+        {/* Feature cards — specifiche per pagina */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10 reveal">
+          {data.features.map((f, i) => (
+            <div
+              key={i}
+              className="flex flex-col gap-2 p-5"
+              style={{
+                background: '#fff',
+                borderRadius: '16px',
+                border: '1px solid rgba(81,113,138,0.1)',
+                boxShadow: '0 2px 16px rgba(81,113,138,0.07)',
+              }}
+            >
+              <span
+                className="font-sans font-semibold"
+                style={{ fontSize: '10px', letterSpacing: '0.22em', color: '#DFCF86' }}
+              >
+                0{i + 1}
+              </span>
+              <p className="font-serif font-semibold text-brand-text-dark" style={{ fontSize: 'clamp(0.9rem, 2vw, 1.05rem)', lineHeight: 1.25 }}>
+                {f.label}
+              </p>
+              <p className="font-sans text-brand-text-light text-xs leading-relaxed">
+                {f.desc}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   )

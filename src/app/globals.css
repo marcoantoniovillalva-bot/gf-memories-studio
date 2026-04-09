@@ -379,6 +379,32 @@ a {
 }
 
 /* ============================================
+   HERO VIDEO — aspect ratio responsive
+   ============================================ */
+.hero-video-wrapper {
+  aspect-ratio: 4 / 3; /* mobile: più alto */
+}
+@media (min-width: 768px) {
+  .hero-video-wrapper {
+    aspect-ratio: 16 / 10; /* desktop: formato wide */
+  }
+}
+
+/* ============================================
+   SERVICE LANDING HERO — altezza mobile ridotta
+   ============================================ */
+.service-hero-section {
+  height: 72svh;
+  min-height: 440px;
+}
+@media (min-width: 768px) {
+  .service-hero-section {
+    height: 100svh;
+    min-height: 520px;
+  }
+}
+
+/* ============================================
    SERVICE CARD IMAGE — responsive height
    ============================================ */
 .service-card-image {

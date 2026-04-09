@@ -75,7 +75,7 @@ export function Navbar() {
               height={44}
               priority
               quality={95}
-              className="w-12 h-12 object-contain"
+              className="w-16 h-16 object-contain"
             />
           </Link>
 

@@ -19,6 +19,12 @@ const data: LandingPageData = {
     body: "In studio controlliamo ogni variabile — luce, sfondo, composizione — per ottenere immagini precise e allo stesso tempo umane. Ritratti aziendali, book per attori e modelli, foto per LinkedIn o uso personale: ogni sessione è progettata attorno a te.",
   },
 
+  features: [
+    { label: 'Luce Controllata', desc: 'Setup professionale con luci calibrate per ogni volto e ogni look.' },
+    { label: 'Stile su Misura', desc: 'Sfondi, composizioni e mood scelti insieme per rispecchiare la tua personalità.' },
+    { label: 'Post-Produzione Raffinata', desc: 'Retouching elegante e non invasivo — il meglio di te, in modo autentico.' },
+  ],
+
   gallery: [
     { src: '/images/fotografia-studio.jpeg', alt: 'Ritratto professionale in studio' },
     { src: '/images/chi-siamo.jpeg', alt: 'Sessione studio premium' },

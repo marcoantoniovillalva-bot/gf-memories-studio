@@ -79,6 +79,7 @@ export default function RootLayout({
       className={`${playfair.variable} ${cormorant.variable} ${inter.variable}`}
     >
       <head>
+        <meta name="theme-color" content="#51718A" />
         {/* Google Analytics placeholder — sostituire G-XXXXXXXXXX con il proprio ID */}
         {/*
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX" />
