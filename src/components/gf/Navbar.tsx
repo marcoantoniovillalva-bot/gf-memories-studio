@@ -59,23 +59,10 @@ export function Navbar() {
           }}
           aria-label="Navigazione principale"
         >
-          {/* Desktop left links */}
-          <ul className="hidden md:flex items-center gap-6 list-none m-0 p-0">
-            <li>
-              <Link href="/fotografia-allaperto"
-                className="font-sans text-[10px] font-medium uppercase tracking-[0.16em] text-white/65 hover:text-brand-gold transition-colors duration-300">
-                All&apos;aperto
-              </Link>
-            </li>
-            <li>
-              <Link href="/fotografia-studio"
-                className="font-sans text-[10px] font-medium uppercase tracking-[0.16em] text-white/65 hover:text-brand-gold transition-colors duration-300">
-                Studio
-              </Link>
-            </li>
-          </ul>
+          {/* Spacer sinistra */}
+          <div className="w-8" aria-hidden="true" />
 
-          {/* Logo — centered */}
+          {/* Logo — sempre centrato */}
           <Link
             href="/"
             className="absolute left-1/2 -translate-x-1/2 flex items-center"
@@ -88,45 +75,22 @@ export function Navbar() {
               height={44}
               priority
               quality={95}
-              className="w-12 h-12 md:w-10 md:h-10 object-contain"
+              className="w-12 h-12 object-contain"
             />
           </Link>
 
-          {/* Desktop right */}
-          <div className="hidden md:flex items-center gap-6">
-            <Link href="/fotografia-animali"
-              className="font-sans text-[10px] font-medium uppercase tracking-[0.16em] text-white/65 hover:text-brand-gold transition-colors duration-300">
-              Animali
-            </Link>
-            <a
-              href="https://wa.link/yflhc8"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-1.5 font-sans text-[10px] font-semibold uppercase tracking-[0.16em] text-[#192633] rounded-full btn-luxury-gold"
-              style={{ background: '#DFCF86' }}
-            >
-              Prenota
-            </a>
-          </div>
-
-          {/* Mobile: logo placeholder (spacer) + hamburger */}
-          <div className="md:hidden flex items-center justify-between w-full">
-            {/* spacer left */}
-            <div className="w-8" aria-hidden="true" />
-            {/* logo is absolute-centered, rendered above */}
-            {/* hamburger right */}
-            <button
-              id="hamburger-btn"
-              onClick={() => setMenuOpen((v) => !v)}
-              aria-expanded={menuOpen}
-              aria-label={menuOpen ? 'Chiudi menu' : 'Apri menu'}
-              className="flex flex-col gap-[5px] p-1"
-            >
-              <span className={`block h-px bg-brand-gold transition-all duration-300 origin-center ${menuOpen ? 'w-5 rotate-45 translate-y-[9px]' : 'w-5'}`} />
-              <span className={`block h-px bg-brand-gold/60 transition-all duration-300 ${menuOpen ? 'opacity-0 w-0' : 'w-3.5'}`} />
-              <span className={`block h-px bg-brand-gold transition-all duration-300 origin-center ${menuOpen ? 'w-5 -rotate-45 -translate-y-[9px]' : 'w-5'}`} />
-            </button>
-          </div>
+          {/* Hamburger — sempre visibile */}
+          <button
+            id="hamburger-btn"
+            onClick={() => setMenuOpen((v) => !v)}
+            aria-expanded={menuOpen}
+            aria-label={menuOpen ? 'Chiudi menu' : 'Apri menu'}
+            className="flex flex-col gap-[5px] p-1"
+          >
+            <span className={`block h-px bg-brand-gold transition-all duration-300 origin-center ${menuOpen ? 'w-5 rotate-45 translate-y-[9px]' : 'w-5'}`} />
+            <span className={`block h-px bg-brand-gold/60 transition-all duration-300 ${menuOpen ? 'opacity-0 w-0' : 'w-3.5'}`} />
+            <span className={`block h-px bg-brand-gold transition-all duration-300 origin-center ${menuOpen ? 'w-5 -rotate-45 -translate-y-[9px]' : 'w-5'}`} />
+          </button>
         </nav>
       </header>
 
@@ -134,7 +98,7 @@ export function Navbar() {
 
       {/* Backdrop sfocato */}
       <div
-        className={`fixed inset-0 z-50 transition-all duration-300 md:hidden ${menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
+        className={`fixed inset-0 z-50 transition-all duration-300 ${menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
         style={{ backdropFilter: 'blur(6px)', WebkitBackdropFilter: 'blur(6px)', background: 'rgba(40,65,82,0.45)' }}
         aria-hidden={!menuOpen}
         onClick={() => setMenuOpen(false)}
@@ -148,7 +112,7 @@ export function Navbar() {
         aria-label="Menu di navigazione"
         aria-hidden={!menuOpen}
         className={`
-          fixed z-50 md:hidden
+          fixed z-50
           left-1/2 -translate-x-1/2
           w-[88vw] max-w-sm
           transition-all duration-350

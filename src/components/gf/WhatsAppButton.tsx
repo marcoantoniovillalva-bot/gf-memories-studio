@@ -17,7 +17,7 @@ export function WhatsAppButton() {
         hover:scale-110 hover:shadow-[0_6px_32px_rgba(223,207,134,0.55)]
         focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#DFCF86]
       "
-      style={{ backgroundColor: '#192633', border: '1px solid rgba(223,207,134,0.3)' }}
+      style={{ backgroundColor: 'rgba(81,113,138,0.97)', border: '1px solid rgba(223,207,134,0.3)' }}
     >
       <svg
         viewBox="0 0 24 24"

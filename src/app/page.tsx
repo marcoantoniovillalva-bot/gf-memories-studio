@@ -52,7 +52,7 @@ function HeroSection() {
           style={{
             borderRadius: '14px',
             aspectRatio: '16/9',
-            maxHeight: 'min(44svh, 420px)',
+            maxHeight: 'min(52svh, 500px)',
             background: '#1a1a1a',
             boxShadow: '0 16px 48px rgba(81,113,138,0.22)',
             flexShrink: 0,
@@ -82,7 +82,7 @@ function HeroSection() {
           </p>
           <p
             className="font-sans text-brand-text-mid text-center leading-snug"
-            style={{ fontSize: 'clamp(0.68rem, 2vw, 0.85rem)', maxWidth: '300px' }}
+            style={{ fontSize: 'clamp(0.78rem, 2.4vw, 0.9rem)', maxWidth: '320px' }}
           >
             Drone, studio professionale e luce naturale — per fermare i momenti che contano.
           </p>
@@ -128,30 +128,55 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
   return (
     <Link
       href={service.href}
-      className="group relative block overflow-hidden reveal card-luxury"
-      style={{ borderRadius: '12px', transitionDelay: `${index * 100}ms`, boxShadow: '0 4px 20px rgba(81,113,138,0.14)', aspectRatio: '3/4' }}
+      className="group block relative reveal"
+      style={{ transitionDelay: `${index * 100}ms` }}
       aria-label={service.title}
     >
-      <Image src={service.image} alt={service.title} fill quality={95}
-        sizes="(max-width: 768px) 33vw, 400px"
-        className="object-cover transition-transform duration-600 group-hover:scale-105" />
-      <div className="absolute inset-0" aria-hidden="true"
-        style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0) 35%, rgba(25,38,51,0.88) 100%)' }} />
-      <div className="absolute bottom-0 left-0 right-0 p-2 md:p-3 flex flex-col gap-0.5">
-        <p className="font-script italic leading-none text-brand-gold" style={{ fontSize: 'clamp(0.58rem, 1.8vw, 0.75rem)' }}>
-          {service.tagline}
-        </p>
-        <div className="flex items-center justify-between gap-1">
-          <h3 className="font-serif font-semibold text-white leading-tight" style={{ fontSize: 'clamp(0.62rem, 2vw, 0.9rem)' }}>
+      {/* Immagine — overflow hidden per border-radius, badge esce fuori */}
+      <div
+        className="service-card-image relative overflow-hidden w-full"
+        style={{
+          borderRadius: '12px',
+          boxShadow: '0 4px 20px rgba(81,113,138,0.14)',
+          background: '#1a1a1a',
+          transition: 'transform 0.35s ease, box-shadow 0.35s ease',
+        }}
+      >
+        <Image src={service.image} alt={service.title} fill quality={95}
+          sizes="(max-width: 768px) 90vw, 400px"
+          className="object-cover transition-transform duration-600 group-hover:scale-105" />
+        <div className="absolute inset-0" aria-hidden="true"
+          style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.15) 100%)' }} />
+      </div>
+
+      {/* Badge etichetta — sovrapposto fuori dal bordo inferiore dell'immagine */}
+      <div
+        className="flex items-center justify-between px-2"
+        style={{ marginTop: '-18px', position: 'relative', zIndex: 10 }}
+      >
+        <div
+          style={{
+            background: '#192633',
+            borderRadius: '100px',
+            padding: '5px 10px 5px 12px',
+            border: '1px solid rgba(223,207,134,0.2)',
+          }}
+        >
+          <p className="font-script italic leading-none text-brand-gold" style={{ fontSize: 'clamp(0.6rem, 1.6vw, 0.7rem)' }}>
+            {service.tagline}
+          </p>
+          <h3 className="font-serif font-semibold text-white leading-tight" style={{ fontSize: 'clamp(0.78rem, 2.2vw, 0.95rem)' }}>
             {service.title}
           </h3>
-          <span className="flex items-center gap-0.5 px-1.5 py-0.5 flex-shrink-0"
-            style={{ background: '#192633', borderRadius: '100px', border: '1px solid rgba(223,207,134,0.22)' }}>
-            <svg className="w-2.5 h-2.5 text-brand-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-            </svg>
-          </span>
         </div>
+        <span
+          className="flex items-center justify-center w-7 h-7 flex-shrink-0"
+          style={{ background: '#192633', borderRadius: '100px', border: '1px solid rgba(223,207,134,0.22)' }}
+        >
+          <svg className="w-3 h-3 text-brand-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+          </svg>
+        </span>
       </div>
     </Link>
   )
@@ -168,7 +193,7 @@ function QuoteStrip() {
               className="font-script italic text-brand-gold leading-snug"
               style={{ fontSize: 'clamp(1.25rem, 3.8vw, 2rem)' }}
             >
-              &ldquo;Non fotografiamo posa. Fotografiamo persone.&rdquo;
+              &ldquo;Non raccontiamo pose. Raccontiamo persone.&rdquo;
             </p>
             <cite
               className="font-sans not-italic text-white/30 uppercase block mt-3"
@@ -198,7 +223,7 @@ function ServicesSection() {
           </h2>
           <span className="line-gold" aria-hidden="true" />
         </div>
-        <div className="grid grid-cols-3 gap-2 md:gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-5">
           {services.map((s, i) => <ServiceCard key={s.href} service={s} index={i} />)}
         </div>
 

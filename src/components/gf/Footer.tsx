@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Image from 'next/image'
 
 export function Footer() {
   return (
@@ -10,43 +9,13 @@ export function Footer() {
       {/* Gold top border */}
       <div className="w-full h-px" style={{ background: 'linear-gradient(90deg, transparent, #DFCF86, transparent)' }} />
 
-      <div className="container-site pt-14 pb-8">
+      <div className="container-site pt-10 pb-8">
 
-        {/* TOP — logo centrato + tagline */}
-        <div className="flex flex-col items-center text-center gap-3 mb-12 md:mb-14 pt-12">
-          <Image
-            src="/logo trasparente.png"
-            alt="GF Memories Studio"
-            width={72}
-            height={72}
-            quality={95}
-            className="w-16 h-16 object-contain opacity-90"
-          />
-          <p className="font-script italic text-brand-gold text-xl md:text-2xl leading-snug">
-            Immagini autentiche.<br />Qualità cinematografica.
-          </p>
-          <div className="w-8 h-px mt-1" style={{ background: '#DFCF86' }} aria-hidden="true" />
-        </div>
+        {/* GRID — 2 colonne */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-6 mb-12 pt-4">
 
-        {/* GRID — 3 colonne */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 mb-12">
-
-          {/* Colonna 1 — Studio */}
+          {/* Colonna 1 — Servizi */}
           <div className="flex flex-col gap-3 md:gap-4">
-            <h3
-              className="font-sans font-semibold uppercase text-white/50"
-              style={{ fontSize: '9px', letterSpacing: '0.24em' }}
-            >
-              Studio
-            </h3>
-            <p className="font-sans text-sm text-white/55 leading-relaxed">
-              GF Memories Studio nasce dalla passione di una famiglia per la fotografia autentica.
-              Attrezzatura di ultima generazione, drone certificato, post-produzione curata.
-            </p>
-          </div>
-
-          {/* Colonna 2 — Servizi */}
-          <div className="flex flex-col gap-3 md:gap-4 md:items-center">
             <h3
               className="font-sans font-semibold uppercase text-white/50"
               style={{ fontSize: '9px', letterSpacing: '0.24em' }}
@@ -71,7 +40,7 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Colonna 3 — Contatti */}
+          {/* Colonna 2 — Contatti */}
           <div className="flex flex-col gap-3 md:gap-4 md:items-end md:text-right">
             <h3
               className="font-sans font-semibold uppercase text-white/50"
@@ -92,15 +61,6 @@ export function Footer() {
               <li>
                 <a href="tel:3272984490" className="font-sans text-sm text-white/55 hover:text-brand-gold transition-colors duration-300">
                   327 298 4490
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://wa.link/yflhc8"
-                  target="_blank" rel="noopener noreferrer"
-                  className="font-sans text-sm text-brand-gold/80 hover:text-brand-gold transition-colors duration-300"
-                >
-                  WhatsApp
                 </a>
               </li>
             </ul>

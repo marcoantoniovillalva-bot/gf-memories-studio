@@ -379,6 +379,20 @@ a {
 }
 
 /* ============================================
+   SERVICE CARD IMAGE — responsive height
+   ============================================ */
+.service-card-image {
+  /* Mobile: stessa altezza visiva di prima (33vw * 4/3 ≈ 44vw), larghezza piena */
+  height: 44vw;
+}
+@media (min-width: 768px) {
+  .service-card-image {
+    height: auto;
+    aspect-ratio: 3 / 4;
+  }
+}
+
+/* ============================================
    LUXURY HOVER EFFECTS
    ============================================ */
 
