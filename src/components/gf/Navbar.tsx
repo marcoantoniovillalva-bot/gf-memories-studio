@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
-const INSTAGRAM_URL = 'https://www.instagram.com/gfmemoriesstudio'
+const INSTAGRAM_URL = 'https://www.instagram.com/gio_g.f.7?igsh=Nm40aGQxODU3dGZ4'
 
 const NAV_LINKS = [
   { label: "Fotografia all'aperto", href: '/fotografia-allaperto' },
@@ -71,7 +71,7 @@ export function Navbar() {
             aria-label="GF Memories Studio — home"
           >
             <Image
-              src="/logo sin fondo.png"
+              src="/logo-gf.png"
               alt="GF Memories Studio"
               width={44}
               height={44}
