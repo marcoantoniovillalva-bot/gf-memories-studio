@@ -149,12 +149,50 @@ function GallerySection({ images }: { images: GalleryImage[] }) {
 }
 
 /* ── ABOUT / PROCESSO ───────────────────────── */
+const APPROACH_PILLARS = [
+  {
+    label: 'Autenticità',
+    desc: 'Nessuna posa forzata',
+    icon: (
+      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+      </svg>
+    ),
+  },
+  {
+    label: 'Qualità Cinematic',
+    desc: 'Luce & post-produzione',
+    icon: (
+      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zM18.75 10.5h.008v.008h-.008V10.5z" />
+      </svg>
+    ),
+  },
+  {
+    label: 'Drone Certificato',
+    desc: 'Prospettive uniche dall\'alto',
+    icon: (
+      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
+      </svg>
+    ),
+  },
+  {
+    label: 'Cura del Dettaglio',
+    desc: 'Ogni scatto è unico',
+    icon: (
+      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
+      </svg>
+    ),
+  },
+]
+
 function AboutSection({ data }: { data: LandingPageData }) {
   return (
     <section className="bg-brand-off-white py-12 md:py-20" aria-label={data.about.heading}>
       <div className="container-site">
-
-        {/* Card contenitore — tiene tutto insieme visivamente */}
         <div
           className="grid grid-cols-1 md:grid-cols-2 overflow-hidden reveal"
           style={{
@@ -164,57 +202,57 @@ function AboutSection({ data }: { data: LandingPageData }) {
             border: '1px solid rgba(81,113,138,0.08)',
           }}
         >
-          {/* Immagine — sempre chi-siamo, compatta su mobile */}
-          <div
-            className="relative order-1"
-            style={{
-              minHeight: '200px',
-              maxHeight: '280px',
-              height: '100%',
-            }}
-          >
+          {/* Immagine */}
+          <div className="relative order-1" style={{ minHeight: '200px', maxHeight: '320px', height: '100%' }}>
             <div className="relative w-full h-full" style={{ minHeight: '200px' }}>
               <Image
                 src="/images/chi-siamo.jpeg"
                 alt="La famiglia Frunza — GF Memories Studio"
-                fill
-                quality={92}
+                fill quality={92}
                 sizes="(max-width: 768px) 100vw, 600px"
                 className="object-cover"
                 style={{ objectPosition: 'center 20%' }}
               />
-              {/* Gold gradient overlay on right edge (desktop) */}
-              <div
-                className="absolute inset-0 hidden md:block"
-                aria-hidden="true"
-                style={{ background: 'linear-gradient(to right, transparent 70%, #fff 100%)' }}
-              />
+              <div className="absolute inset-0 hidden md:block" aria-hidden="true"
+                style={{ background: 'linear-gradient(to right, transparent 70%, #fff 100%)' }} />
             </div>
           </div>
 
-          {/* Testo */}
+          {/* Pilastri visivi */}
           <div className="flex flex-col gap-4 p-6 md:p-10 order-2">
-            <span
-              className="font-sans uppercase text-brand-blue/55"
-              style={{ fontSize: '9px', letterSpacing: '0.24em' }}
-            >
+            <span className="font-sans uppercase text-brand-blue/55" style={{ fontSize: '9px', letterSpacing: '0.24em' }}>
               Il nostro approccio
             </span>
-            <h2
-              className="font-serif font-semibold text-brand-text-dark"
-              style={{ fontSize: 'clamp(1.3rem, 3vw, 2rem)' }}
-            >
+            <h2 className="font-serif font-semibold text-brand-text-dark" style={{ fontSize: 'clamp(1.3rem, 3vw, 2rem)' }}>
               {data.about.heading}
             </h2>
             <span className="line-gold-left" aria-hidden="true" />
-            <p className="font-sans text-brand-text-mid text-sm md:text-base leading-relaxed">
-              {data.about.body}
-            </p>
-            <a
-              href="https://wa.link/yflhc8"
-              target="_blank" rel="noopener noreferrer"
-              className="btn-primary self-start mt-1"
-            >
+
+            {/* 2×2 grid visivo */}
+            <div className="grid grid-cols-2 gap-2.5 mt-1">
+              {APPROACH_PILLARS.map((p) => (
+                <div
+                  key={p.label}
+                  className="flex flex-col gap-1.5 p-3.5"
+                  style={{
+                    background: '#F9F7F4',
+                    borderRadius: '12px',
+                    border: '1px solid rgba(81,113,138,0.09)',
+                  }}
+                >
+                  <span className="text-brand-blue">{p.icon}</span>
+                  <p className="font-serif font-semibold text-brand-text-dark" style={{ fontSize: 'clamp(0.75rem, 1.8vw, 0.9rem)', lineHeight: 1.2 }}>
+                    {p.label}
+                  </p>
+                  <p className="font-sans text-brand-text-light" style={{ fontSize: '11px', lineHeight: 1.4 }}>
+                    {p.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            <a href="https://wa.link/yflhc8" target="_blank" rel="noopener noreferrer"
+              className="btn-primary self-start mt-2">
               Prenota ora
             </a>
           </div>
@@ -334,25 +372,36 @@ function CtaSection({ heading, body }: { heading: string; body: string }) {
   return (
     <section
       className="relative overflow-hidden section-padding"
-      style={{ background: '#192633' }}
+      style={{ background: '#F9F7F4' }}
       aria-label="Prenota la tua sessione"
     >
-      <div className="absolute inset-0 opacity-20" aria-hidden="true"
-        style={{ backgroundImage: 'radial-gradient(circle at 20% 50%, #51718A 0%, transparent 55%), radial-gradient(circle at 80% 50%, #DFCF86 0%, transparent 55%)' }} />
+      {/* Subtle gold & blue radial glow */}
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true"
+        style={{ backgroundImage: 'radial-gradient(ellipse at 15% 60%, rgba(81,113,138,0.1) 0%, transparent 55%), radial-gradient(ellipse at 85% 40%, rgba(223,207,134,0.12) 0%, transparent 55%)' }} />
+
       <div className="container-site relative text-center">
         <div className="max-w-xl mx-auto flex flex-col items-center gap-4 reveal">
-          <span className="font-script italic text-brand-gold text-xl md:text-2xl">Pronto a iniziare?</span>
-          <h2 className="font-serif font-semibold text-white" style={{ fontSize: 'clamp(1.7rem, 4vw, 2.8rem)' }}>
+          {/* Gold line top */}
+          <span className="line-gold block mx-auto" aria-hidden="true" />
+
+          <span className="font-script italic text-brand-blue text-xl md:text-2xl mt-2">Pronto a iniziare?</span>
+          <h2 className="font-serif font-semibold text-brand-text-dark" style={{ fontSize: 'clamp(1.7rem, 4vw, 2.8rem)' }}>
             {heading}
           </h2>
-          <p className="font-sans text-white/55 text-sm md:text-base leading-relaxed">{body}</p>
-          <a href="https://wa.link/yflhc8" target="_blank" rel="noopener noreferrer" className="btn-gold text-sm mt-1">
+          <p className="font-sans text-brand-text-mid text-sm md:text-base leading-relaxed max-w-md">{body}</p>
+
+          <a href="https://wa.link/yflhc8" target="_blank" rel="noopener noreferrer"
+            className="btn-luxury-gold mt-2 inline-flex items-center gap-2 px-8 py-3.5 font-sans font-bold uppercase tracking-[0.14em] rounded-full"
+            style={{ fontSize: '11px', background: '#DFCF86', color: '#0f1e29' }}
+          >
             <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 flex-shrink-0" aria-hidden="true">
               <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
             </svg>
             Scrivici su WhatsApp
           </a>
-          <p className="font-sans text-white/28 text-xs">Via Luigi Goia, 31 — Mortara (PV) · 327 298 4490</p>
+
+          {/* Gold line bottom */}
+          <span className="line-gold block mx-auto mt-2" aria-hidden="true" />
         </div>
       </div>
     </section>

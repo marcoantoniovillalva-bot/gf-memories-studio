@@ -29,7 +29,7 @@ function HeroSection() {
         <div className="flex flex-col items-center text-center gap-0.5">
           <h1
             className="font-serif font-semibold text-brand-text-dark leading-[1.05]"
-            style={{ fontSize: 'clamp(1.4rem, 5vw, 3.2rem)', letterSpacing: '0.06em' }}
+            style={{ fontSize: 'clamp(1.4rem, 4vw, 2.6rem)', letterSpacing: '0.06em' }}
           >
             IMMAGINI AUTENTICHE
           </h1>
@@ -40,7 +40,7 @@ function HeroSection() {
           </div>
           <p
             className="font-serif font-semibold leading-[1.05]"
-            style={{ fontSize: 'clamp(1rem, 3.8vw, 2.4rem)', letterSpacing: '0.06em', color: '#DFCF86' }}
+            style={{ fontSize: 'clamp(1rem, 3vw, 2rem)', letterSpacing: '0.06em', color: '#DFCF86' }}
           >
             QUALITÀ CINEMATOGRAFICA
           </p>
@@ -51,8 +51,8 @@ function HeroSection() {
           className="relative w-full overflow-hidden"
           style={{
             borderRadius: '14px',
-            aspectRatio: '16/9',
-            maxHeight: 'min(52svh, 500px)',
+            aspectRatio: '16/10',
+            maxHeight: 'min(60svh, 560px)',
             background: '#1a1a1a',
             boxShadow: '0 16px 48px rgba(81,113,138,0.22)',
             flexShrink: 0,
