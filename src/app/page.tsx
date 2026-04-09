@@ -133,7 +133,7 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
     >
       {/* Badge etichetta — sovrapposto fuori dal bordo superiore sinistro dell'immagine */}
       <div
-        className="absolute left-3 z-10 flex items-center gap-2"
+        className="absolute left-3 z-10"
         style={{ top: '-16px' }}
       >
         <div
@@ -151,14 +151,6 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
             {service.title}
           </h3>
         </div>
-        <span
-          className="flex items-center justify-center w-8 h-8 flex-shrink-0"
-          style={{ background: '#192633', borderRadius: '100px', border: '1px solid rgba(223,207,134,0.22)' }}
-        >
-          <svg className="w-3.5 h-3.5 text-brand-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-          </svg>
-        </span>
       </div>
 
       {/* Immagine — overflow hidden per border-radius */}
@@ -176,6 +168,21 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
           className="object-cover transition-transform duration-600 group-hover:scale-105" />
         <div className="absolute inset-0" aria-hidden="true"
           style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.15) 100%)' }} />
+      </div>
+
+      {/* Freccia — in basso a destra fuori dall'immagine */}
+      <div
+        className="flex justify-end px-2"
+        style={{ marginTop: '-18px', position: 'relative', zIndex: 10 }}
+      >
+        <span
+          className="flex items-center justify-center w-8 h-8 flex-shrink-0"
+          style={{ background: '#192633', borderRadius: '100px', border: '1px solid rgba(223,207,134,0.22)' }}
+        >
+          <svg className="w-3.5 h-3.5 text-brand-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+          </svg>
+        </span>
       </div>
     </Link>
   )
