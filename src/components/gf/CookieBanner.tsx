@@ -31,14 +31,13 @@ export function CookieBanner() {
     <div
       role="dialog"
       aria-label="Consenso cookie"
-      className="
-        fixed bottom-0 left-0 right-0 z-50
-        bg-brand-text-dark/95 backdrop-blur-sm
-        text-white
-        px-5 py-5
-        md:px-8 md:py-6
-        animate-fade-in-up
-      "
+      className="fixed bottom-0 left-0 right-0 z-50 text-white px-5 py-5 md:px-8 md:py-6 animate-fade-in-up"
+      style={{
+        background: 'rgba(81,113,138,0.97)',
+        backdropFilter: 'blur(16px)',
+        WebkitBackdropFilter: 'blur(16px)',
+        boxShadow: '0 -4px 32px rgba(81,113,138,0.25), 0 0 0 1px rgba(223,207,134,0.12)',
+      }}
     >
       <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
         <p className="font-sans text-sm text-white/80 leading-relaxed flex-1">

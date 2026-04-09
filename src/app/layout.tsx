@@ -33,6 +33,7 @@ const inter = Inter({
    METADATA SEO
    ============================================ */
 export const metadata: Metadata = {
+  metadataBase: new URL('https://gf-memories-studio-marcos-projects-e20e28f1.vercel.app'),
   title: 'GF Memories Studio | Fotografia Premium a Mortara',
   description:
     'Studio fotografico a Mortara (PV). Fotografia outdoor, ritratti in studio, foto per animali. Drone, qualità cinematografica, approccio naturale. Prenota una sessione.',
@@ -51,10 +52,19 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'GF Memories Studio | Fotografia Premium a Mortara',
     description:
-      'Fotografia autentica di qualità cinematografica. Studio fotografico a Mortara, Pavia.',
+      'Trasformiamo momenti in memorie. Fotografia autentica di qualità cinematografica a Mortara, Pavia. Outdoor, studio, animali.',
     type: 'website',
     locale: 'it_IT',
     siteName: 'GF Memories Studio',
+    url: 'https://gf-memories-studio-marcos-projects-e20e28f1.vercel.app',
+    images: [
+      {
+        url: '/logo-gf.png',
+        width: 800,
+        height: 800,
+        alt: 'GF Memories Studio — Fotografia Premium a Mortara',
+      },
+    ],
   },
   robots: {
     index: true,
