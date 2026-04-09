@@ -5,6 +5,7 @@ import { Footer } from '@/components/gf/Footer'
 import { ScrollReveal } from '@/components/gf/ScrollReveal'
 import { ScrollToTop } from '@/components/gf/ScrollToTop'
 import { FaqAccordion } from '@/components/gf/FaqAccordion'
+import { LightboxGallery } from '@/components/gf/LightboxGallery'
 
 /* ── TYPES ─────────────────────────────────── */
 export interface Review {
@@ -161,20 +162,8 @@ function GallerySection({ images }: { images: GalleryImage[] }) {
           </h2>
           <span className="line-gold mt-3 block mx-auto" aria-hidden="true" />
         </div>
-        {/* 3 col su mobile, max 4 col su desktop */}
-        <div className="grid grid-cols-3 md:grid-cols-3 gap-1.5 md:gap-3">
-          {images.map((img, i) => (
-            <div
-              key={i}
-              className="relative overflow-hidden reveal"
-              style={{ borderRadius: '8px', aspectRatio: '4/5', transitionDelay: `${Math.min(i * 60, 300)}ms` }}
-            >
-              <Image src={img.src} alt={img.alt} fill quality={90}
-                sizes="(max-width: 768px) 33vw, 380px"
-                className="object-cover transition-transform duration-700 hover:scale-105" />
-            </div>
-          ))}
-        </div>
+        {/* Lightbox gallery — 3 col, cliccabile */}
+        <LightboxGallery images={images} />
       </div>
     </section>
   )
