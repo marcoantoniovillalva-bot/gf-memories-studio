@@ -71,7 +71,7 @@ export function Navbar() {
             aria-label="GF Memories Studio — home"
           >
             <Image
-              src="/logo trasparente.png"
+              src="/logo sin fondo.png"
               alt="GF Memories Studio"
               width={44}
               height={44}
