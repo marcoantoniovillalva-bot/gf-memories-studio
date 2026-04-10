@@ -73,10 +73,10 @@ export function Navbar() {
             <Image
               src="/logo-gf.png"
               alt="GF Memories Studio"
-              width={44}
-              height={44}
+              width={128}
+              height={128}
               priority
-              quality={95}
+              quality={100}
               className="w-16 h-16 object-contain"
             />
           </Link>
