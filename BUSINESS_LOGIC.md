@@ -1,154 +1,94 @@
-# BUSINESS_LOGIC.md - LexAgenda
+# BUSINESS_LOGIC.md — GF Memories Studio
 
-> Generado por SaaS Factory | Fecha: 2024-12-20
+> Sito web per studio fotografico professionale | Mortara (PV), Italia
 
-## 1. Problema de Negocio
+---
 
-**Dolor:** Los bufetes de abogados gestionan citas manualmente por WhatsApp/teléfono, perdiendo tiempo y clientes. No tienen visibilidad de disponibilidad, los clientes cancelan sin aviso, y no hay métricas de rendimiento.
+## 1. Problema di Business
 
-**Costo actual:**
-- ~2 horas diarias coordinando citas manualmente
-- ~20% de citas perdidas por falta de recordatorios
-- Pérdida de leads por respuesta lenta
-- Sin métricas de productividad por abogado
+**Il contesto:** Un fotografo professionista specializzato in ritratti di animali domestici, book fotografici e outdoor ha bisogno di una presenza online che trasmetta la qualità del suo lavoro e converta visitatori in clienti.
 
-## 2. Solución
+**Obiettivi:**
+- Mostrare il portfolio in modo cinematografico e luxury
+- Generare richieste di preventivo e prenotazioni via WhatsApp
+- Posizionarsi su Google per ricerche locali (Mortara, Pavia, Garlasco, Vigevano)
+- Costruire fiducia con prove sociali (recensioni, storia del brand)
 
-**Propuesta de valor:** Una plataforma de agendamiento de citas legales que permite a clientes reservar consultas online con abogados según su especialidad y disponibilidad.
+---
 
-**Flujo principal (Happy Path):**
-1. Cliente entra a la plataforma, selecciona tipo de consulta
-2. Sistema muestra abogados disponibles filtrados por especialidad
-3. Cliente selecciona abogado, fecha y hora disponible
-4. Sistema crea la cita y envía confirmación por email
-5. Abogado ve la cita en su dashboard
-6. Sistema envía recordatorio 24h antes
-7. Abogado marca cita como completada y agrega notas
+## 2. Soluzione
 
-## 3. Usuario Objetivo
+**Proposta di valore:** Un sito marketing performante, mobile-first, con galleria ad alta qualità, lightbox interattiva, sezioni servizi espandibili e CTA WhatsApp — ottimizzato per SEO locale e ricerche "fotografo + città".
 
-**Roles:**
-- **Admin del Bufete**: Gestiona abogados, configura horarios, ve reportes
-- **Abogado**: Gestiona su agenda personal, actualiza disponibilidad
-- **Cliente**: Agenda citas, ve historial, recibe recordatorios
+**Flusso principale:**
+1. Visitatore arriva da Google (SEO locale) o Instagram
+2. Hero cinematografico cattura l'attenzione
+3. Sezione servizi espandibile guida verso la specialità cercata
+4. Galleria con lightbox mostra la qualità del lavoro
+5. CTA WhatsApp converte il visitatore in lead diretto
+6. Recensioni e storia personale (Giorgio & Silvana) costruiscono fiducia
 
-**Contexto:** Bufetes pequeños/medianos (1-20 abogados) que quieren profesionalizar su gestión de citas.
+---
 
-## 4. Arquitectura de Datos
+## 3. Utenti Target
 
-**Input:**
-- Datos del cliente (nombre, email, teléfono)
-- Tipo de consulta legal
-- Preferencia de abogado/especialidad
-- Fecha y hora deseada
-- Notas adicionales del cliente
+| Segmento | Bisogno |
+|---|---|
+| Proprietari di cani/gatti | Ritratto professionale del proprio animale |
+| Coppie/famiglie | Book fotografico outdoor o in studio |
+| Aziende locali | Foto prodotto o eventi corporate |
 
-**Output:**
-- Confirmación de cita (email)
-- Recordatorios automáticos (24h antes)
-- Dashboard con citas del día/semana
-- Métricas y reportes
-- Historial de citas
+**Area geografica:** Mortara (PV), Pavia, Garlasco, Vigevano, Abbiategrasso
 
-**Storage (Supabase tables):**
+---
 
-```sql
--- Ya existe
-profiles (id, email, full_name, avatar_url, created_at, updated_at)
-
--- Por crear
-lawyers (
-  id uuid primary key,
-  user_id uuid references profiles(id),
-  specialty text not null,
-  bio text,
-  experience_years int,
-  hourly_rate decimal,
-  rating decimal,
-  is_active boolean default true,
-  created_at timestamptz default now()
-)
-
-appointment_types (
-  id uuid primary key,
-  name text not null,
-  description text,
-  duration_minutes int default 60,
-  price decimal,
-  created_at timestamptz default now()
-)
-
-availability (
-  id uuid primary key,
-  lawyer_id uuid references lawyers(id),
-  day_of_week int, -- 0=domingo, 1=lunes...
-  start_time time,
-  end_time time,
-  is_available boolean default true
-)
-
-appointments (
-  id uuid primary key,
-  client_id uuid references profiles(id),
-  lawyer_id uuid references lawyers(id),
-  appointment_type_id uuid references appointment_types(id),
-  scheduled_at timestamptz not null,
-  duration_minutes int default 60,
-  status text default 'pending', -- pending, confirmed, completed, cancelled
-  notes text,
-  client_notes text,
-  created_at timestamptz default now(),
-  updated_at timestamptz default now()
-)
-
-clients (
-  id uuid primary key,
-  user_id uuid references profiles(id),
-  phone text,
-  address text,
-  created_at timestamptz default now()
-)
-```
-
-## 5. KPI de Éxito
-
-**Métrica principal:** Permitir que un cliente agende una cita en menos de 2 minutos, con visibilidad completa de la agenda para el abogado.
-
-**Métricas secundarias:**
-- Tasa de confirmación de citas > 80%
-- Reducción de no-shows con recordatorios
-- Tiempo promedio de respuesta < 5 segundos
-
-## 6. Especificación Técnica
-
-### Features a Implementar (Feature-First)
+## 4. Pagine e Struttura
 
 ```
-src/features/
-├── auth/              # Autenticación (YA IMPLEMENTADO)
-├── lawyers/           # CRUD abogados, perfiles, especialidades
-├── appointments/      # Gestión de citas, calendario
-├── availability/      # Horarios y disponibilidad
-├── clients/           # Gestión de clientes
-├── booking/           # Flujo de reserva para clientes
-├── notifications/     # Recordatorios y emails
-└── dashboard/         # Métricas y reportes
+/                          → Homepage (hero + servizi + galleria + CTA)
+/fotografia-animali        → Specialità: ritratti cani e gatti
+/fotografia-studio         → Studio fotografico: book, ritratti
+/fotografia-allaperto      → Outdoor: paesaggi, drone
+/cookie-policy             → Cookie policy GDPR
+/privacy-policy            → Privacy policy GDPR
 ```
 
-### Stack Confirmado
-- **Frontend:** Next.js 16 + React 19 + TypeScript + Tailwind 3.4
-- **Backend:** Supabase (Auth + Database + Storage)
-- **Validación:** Zod
-- **State:** Zustand (si necesario)
-- **MCPs:** Next.js DevTools + Playwright + Supabase
+---
 
-### Fases de Implementación (Blueprint)
+## 5. Tech Stack
 
-1. [x] Auth base (COMPLETADO)
-2. [ ] Fase 2: Base de datos (tablas y RLS)
-3. [ ] Fase 3: Feature Lawyers (CRUD abogados)
-4. [ ] Fase 4: Feature Availability (horarios)
-5. [ ] Fase 5: Feature Appointments (citas)
-6. [ ] Fase 6: Feature Booking (flujo cliente)
-7. [ ] Fase 7: Dashboard y métricas
-8. [ ] Fase 8: Notificaciones
+| Layer | Tecnologia |
+|---|---|
+| Framework | Next.js 16 (App Router) + React 19 + TypeScript |
+| Styling | Tailwind CSS 3.4 + sistema colori brand custom |
+| Auth | Supabase SSR (area prenotazioni futura) |
+| Immagini | Next.js Image (2× retina, lazy loading, WebP) |
+| Animazioni | CSS scroll-driven + ScrollReveal custom |
+| SEO | Open Graph, Twitter Cards, JSON-LD LocalBusiness, sitemap |
+| Deployment | Vercel |
+
+---
+
+## 6. Design System
+
+- **Font:** Serif (headline) + Script (accenti) + Sans (corpo)
+- **Colori:** Off-white brand (`#FAF9F6`), oro accento (`#DFCF86`), blu brand
+- **Stile:** Luxury, cinematografico, warm — ispirato a brand fotografici premium
+
+---
+
+## 7. KPI di Successo
+
+- Posizionamento Google per "fotografo animali Mortara/Pavia"
+- Click su CTA WhatsApp (tasso conversione)
+- Core Web Vitals: LCP < 2.5s, CLS < 0.1
+- Richieste di preventivo mensili
+
+---
+
+## 8. Note Sviluppo
+
+- Le immagini vanno servite in formato WebP con `sizes` prop corretti per evitare blur su schermi retina
+- Il cookie banner rispetta GDPR italiano
+- Il lightbox supporta swipe mobile, tastiera e fullscreen
+- Instagram link punta al profilo ufficiale dello studio
