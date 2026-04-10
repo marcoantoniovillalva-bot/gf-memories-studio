@@ -6,7 +6,7 @@ export function WhatsAppButton() {
       href="https://wa.link/yflhc8"
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Contattaci su WhatsApp"
+      aria-label="Contattami su WhatsApp"
       className="
         fixed bottom-6 right-5 z-50
         w-14 h-14
