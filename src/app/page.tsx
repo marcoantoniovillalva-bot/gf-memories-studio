@@ -199,7 +199,7 @@ function QuoteStrip() {
               className="font-script italic text-brand-gold leading-snug"
               style={{ fontSize: 'clamp(1.25rem, 3.8vw, 2rem)' }}
             >
-              &ldquo;Trasformiamo momenti in memorie.&rdquo;
+              &ldquo;Trasformo momenti in memorie.&rdquo;
             </p>
             <cite
               className="font-sans not-italic text-white/30 uppercase block mt-3"
