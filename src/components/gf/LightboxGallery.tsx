@@ -55,8 +55,8 @@ export function LightboxGallery({ images }: { images: GalleryImage[] }) {
             <Image
               src={img.src}
               alt={img.alt}
-              fill quality={90}
-              sizes="(max-width: 768px) 33vw, 380px"
+              fill quality={95}
+              sizes="(max-width: 640px) 33vw, (max-width: 1280px) 30vw, 420px"
               className="object-cover transition-transform duration-700 group-hover:scale-105"
             />
             {/* Expand overlay on hover */}
@@ -105,8 +105,8 @@ export function LightboxGallery({ images }: { images: GalleryImage[] }) {
               <Image
                 src={images[open].src}
                 alt={images[open].alt}
-                fill quality={95}
-                sizes="(max-width: 768px) 92vw, 900px"
+                fill quality={100}
+                sizes="(max-width: 768px) 92vw, 1200px"
                 className="object-contain"
                 priority
               />

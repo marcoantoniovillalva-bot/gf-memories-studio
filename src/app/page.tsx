@@ -164,7 +164,7 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
         }}
       >
         <Image src={service.image} alt={service.title} fill quality={95}
-          sizes="(max-width: 768px) 90vw, 400px"
+          sizes="(max-width: 640px) 90vw, (max-width: 1280px) 30vw, 420px"
           className="object-cover transition-transform duration-600 group-hover:scale-105" />
         <div className="absolute inset-0" aria-hidden="true"
           style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.15) 100%)' }} />
