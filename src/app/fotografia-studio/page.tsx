@@ -28,10 +28,10 @@ const data: LandingPageData = {
   gallery: [
     { src: '/images/fotografia-studio.jpeg', alt: 'Ritratto professionale in studio' },
     { src: '/images/chi-siamo.jpeg', alt: 'Sessione studio premium' },
-    { src: '/images/fotografia-studio.jpeg', alt: 'Book fotografico studio' },
-    { src: '/images/chi-siamo.jpeg', alt: 'Ritratto aziendale' },
-    { src: '/images/fotografia-studio.jpeg', alt: 'Book attore studio' },
-    { src: '/images/chi-siamo.jpeg', alt: 'Foto professionale studio' },
+    { src: '/images/foto-studio1.jpeg', alt: 'Book fotografico in studio' },
+    { src: '/images/foto-studio2.jpeg', alt: 'Ritratto in studio professionale' },
+    { src: '/images/foto-studio3.jpeg', alt: 'Sessione fotografica studio' },
+    { src: '/images/foto-animali2.jpeg', alt: 'Pet photography in studio' },
   ],
 
   about: {

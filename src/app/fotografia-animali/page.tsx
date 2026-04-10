@@ -29,9 +29,9 @@ const data: LandingPageData = {
     { src: '/images/fotografia-cane.jpeg', alt: 'Ritratto cane professionale' },
     { src: '/images/fotografia-cane-gatto.jpeg', alt: 'Foto cane e gatto insieme' },
     { src: '/images/fotografia-cane-donna.jpeg', alt: 'Donna con cane outdoor' },
-    { src: '/images/fotografia-bacio-cane-donna.jpeg', alt: 'Bacio tra donna e cane' },
-    { src: '/images/fotografia-cane.jpeg', alt: 'Pet photography outdoor' },
-    { src: '/images/fotografia-cane-gatto.jpeg', alt: 'Foto animali domestici' },
+    { src: '/images/foto-animali1.jpeg', alt: 'Fotografia animali domestici' },
+    { src: '/images/foto-animali2.jpeg', alt: 'Pet photography professionale' },
+    { src: '/images/foto-animali3.jpeg', alt: 'Ritratto animale domestico' },
   ],
 
   about: {

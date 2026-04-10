@@ -29,9 +29,9 @@ const data: LandingPageData = {
     { src: '/images/fotografia-aperto.jpeg', alt: "Ritratto all'aperto con luce naturale" },
     { src: '/images/fotografia-bacio-cane-donna.jpeg', alt: 'Coppia con cane outdoor' },
     { src: '/images/fotografia-cane-donna.jpeg', alt: 'Donna con cane in esterno' },
-    { src: '/images/fotografia-aperto.jpeg', alt: 'Sessione fotografica outdoor' },
-    { src: '/images/fotografia-bacio-cane-donna.jpeg', alt: 'Ritratto esterno naturale' },
-    { src: '/images/fotografia-cane-donna.jpeg', alt: 'Foto outdoor autentica' },
+    { src: '/images/foto-aperto1.jpeg', alt: 'Sessione fotografica outdoor' },
+    { src: '/images/foto-aperto2.jpeg', alt: 'Ritratto esterno luce naturale' },
+    { src: '/images/foto-aperto3.jpeg', alt: 'Fotografia outdoor autentica' },
   ],
 
   about: {
