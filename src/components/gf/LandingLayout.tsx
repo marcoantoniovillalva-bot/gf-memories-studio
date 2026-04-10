@@ -64,7 +64,7 @@ function ServiceHero({ data }: { data: LandingPageData }) {
       />
       {/* gradient: più opaco in alto per leggibilità con navbar */}
       <div className="absolute inset-0" aria-hidden="true"
-        style={{ background: 'linear-gradient(to bottom, rgba(25,38,51,0.55) 0%, rgba(0,0,0,0.15) 45%, rgba(26,26,26,0.72) 100%)' }} />
+        style={{ background: 'linear-gradient(to bottom, rgba(15,28,40,0.72) 0%, rgba(15,28,40,0.48) 40%, rgba(15,28,40,0.55) 65%, rgba(10,18,26,0.80) 100%)' }} />
 
       {/* Back */}
       <div className="absolute z-20" style={{ top: '84px', left: '20px' }}>
