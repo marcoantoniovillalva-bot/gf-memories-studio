@@ -40,9 +40,11 @@ const data: LandingPageData = {
     { src: '/images/foto-animali3.jpeg', alt: 'Ritratto animale domestico' },
   ],
 
+  aboutTheme: 'animals' as const,
+
   about: {
-    heading: 'Pazienti quanto i tuoi animali',
-    body: "Non forziamo mai. Lasciamo che ogni animale esplori l'ambiente e si abitui alla nostra presenza, poi cogliamo il momento giusto. Lavoriamo sia in studio che all'aperto. Timido, iperattivo o imprevedibile — ci piacciono le sfide. Il risultato saranno foto che ti faranno commuovere.",
+    heading: 'Georgii — paziente quanto i tuoi animali',
+    body: "Mi chiamo Georgii e so bene quanto gli animali siano parte della famiglia — per questo li fotografo con la stessa cura che riservo alle persone. Con mia moglie Silvana al mio fianco ho trasformato la mia passione in un lavoro. Non forzo mai: aspetto che ogni animale si senta a suo agio, poi scatto. Opero a Mortara (PV), sia in studio che all\'aperto, e sono disponibile per trasferte. Il risultato saranno immagini che ti faranno commuovere.",
     image: '/images/fotografia-cane-donna.jpeg',
     imageAlt: 'Sessione fotografica con animali domestici GF Memories',
   },

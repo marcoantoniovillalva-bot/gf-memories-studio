@@ -40,9 +40,11 @@ const data: LandingPageData = {
     { src: '/images/foto-animali2.jpeg', alt: 'Pet photography in studio' },
   ],
 
+  aboutTheme: 'studio' as const,
+
   about: {
-    heading: 'Un ambiente pensato per metterti a tuo agio',
-    body: "Lo studio è confortevole e professionale allo stesso tempo. Lavoreremo insieme per trovare le pose e le espressioni più naturali — senza forzature. La post-produzione cura ogni dettaglio per un risultato raffinato e autentico che ti rappresenti davvero.",
+    heading: 'Georgii — precisione e calore in studio',
+    body: "Mi chiamo Georgii e la fotografia è diventata il mio lavoro grazie alla passione e al sostegno di mia moglie Silvana, che non ha mai smesso di credere in me. Il mio studio a Mortara, in provincia di Pavia, è un luogo pensato per metterti a tuo agio: professionale nei dettagli, umano nell\'approccio. Realizzo book, ritratti, servizi per gravidanza, battesimi, comunioni e ogni ricorrenza importante. Spero di toccare le tue emozioni con le mie immagini.",
     image: '/images/fotografia-studio.jpeg',
     imageAlt: 'Studio fotografico professionale GF Memories',
   },

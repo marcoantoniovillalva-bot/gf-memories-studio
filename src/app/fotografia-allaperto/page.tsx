@@ -40,9 +40,11 @@ const data: LandingPageData = {
     { src: '/images/foto-aperto3.jpeg', alt: 'Fotografia outdoor autentica' },
   ],
 
+  aboutTheme: 'outdoor' as const,
+
   about: {
-    heading: 'Ogni luogo racconta una storia',
-    body: "Scegliamo insieme la location perfetta — campi dorati, borghi storici, riva del fiume, campagna lodigiana. Ci adattiamo alla luce del momento e al carattere delle persone. Con drone certificato offriamo anche prospettive aeree uniche che trasformano qualsiasi paesaggio in qualcosa di straordinario.",
+    heading: 'Georgii — dietro l\'obiettivo, all\'aperto',
+    body: "Mi chiamo Georgii e ho sempre avuto la passione per la fotografia. Grazie a mia moglie Silvana, che ha sempre creduto in me, ho avuto la determinazione di trasformare questa passione in un lavoro vero. Opero a Mortara, in provincia di Pavia — facilmente raggiungibile da Milano anche coi mezzi pubblici — e sono disponibile per trasferte, anche all\'estero. Le aree verdi della Lomellina sono il mio palcoscenico preferito per immortalare fidanzamenti, matrimoni, gravidanze e tutti i momenti che contano.",
     image: '/images/fotografia-aperto.jpeg',
     imageAlt: "Fotografo all'aperto in azione — GF Memories Studio",
   },

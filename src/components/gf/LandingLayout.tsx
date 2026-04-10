@@ -38,6 +38,7 @@ export interface LandingPageData {
   process?: { step: string; label: string; desc: string }[]
   gallery: GalleryImage[]
   about: { heading: string; body: string; image: string; imageAlt: string }
+  aboutTheme: 'outdoor' | 'studio' | 'animals'
   reviews: Review[]
   faq: FaqItem[]
   /* CTA */
@@ -169,50 +170,86 @@ function GallerySection({ images }: { images: GalleryImage[] }) {
   )
 }
 
-/* ── ABOUT / PROCESSO ───────────────────────── */
-const APPROACH_PILLARS = [
+/* ── CHI SONO — pilastri per tema ───────────────── */
+const PILLARS_OUTDOOR = [
   {
-    label: 'Autenticità',
-    desc: 'Nessuna posa forzata',
-    icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden="true">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-      </svg>
-    ),
+    label: 'La mia storia',
+    desc: 'Una passione diventata lavoro, con Silvana sempre al mio fianco',
+    icon: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" /></svg>,
   },
   {
-    label: 'Qualità Cinematic',
-    desc: 'Luce & post-produzione',
-    icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden="true">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z" />
-        <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zM18.75 10.5h.008v.008h-.008V10.5z" />
-      </svg>
-    ),
+    label: 'Mortara & dintorni',
+    desc: 'In provincia di Pavia, raggiungibile da Milano. Disponibile per trasferte anche all\'estero',
+    icon: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>,
   },
   {
-    label: 'Drone Certificato',
-    desc: 'Prospettive uniche dall\'alto',
-    icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden="true">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
-      </svg>
-    ),
+    label: 'Luce & natura',
+    desc: 'Le aree verdi della Lomellina come palcoscenico per immagini autentiche',
+    icon: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" /></svg>,
   },
   {
-    label: 'Cura del Dettaglio',
-    desc: 'Ogni scatto è unico',
-    icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden="true">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
-      </svg>
-    ),
+    label: 'Ogni ricorrenza',
+    desc: 'Fidanzamento, matrimonio, gravidanza, nascita e non solo',
+    icon: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>,
   },
 ]
 
+const PILLARS_STUDIO = [
+  {
+    label: 'La mia storia',
+    desc: 'Una passione diventata lavoro, con Silvana sempre al mio fianco',
+    icon: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" /></svg>,
+  },
+  {
+    label: 'Studio a Mortara',
+    desc: 'In provincia di Pavia, facilmente raggiungibile da Milano anche coi mezzi pubblici',
+    icon: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>,
+  },
+  {
+    label: 'Tecnica & cuore',
+    desc: 'Luce calibrata e post-produzione raffinata al servizio dell\'emozione',
+    icon: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z" /><path strokeLinecap="round" strokeLinejoin="round" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zM18.75 10.5h.008v.008h-.008V10.5z" /></svg>,
+  },
+  {
+    label: 'Ogni ricorrenza',
+    desc: 'Book, ritratti, gravidanza, battesimi, comunioni e momenti di famiglia',
+    icon: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>,
+  },
+]
+
+const PILLARS_ANIMALS = [
+  {
+    label: 'La mia storia',
+    desc: 'Una passione diventata lavoro, con Silvana sempre al mio fianco',
+    icon: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" /></svg>,
+  },
+  {
+    label: 'Animali di famiglia',
+    desc: 'Cani e gatti meritano gli stessi scatti straordinari che riserviamo alle persone',
+    icon: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V2.75a.75.75 0 01.75-.75 2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 01-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 00-1.302 4.665c0 1.194.232 2.333.654 3.375z" /></svg>,
+  },
+  {
+    label: 'I loro tempi',
+    desc: 'Nessuna forzatura: aspetto che si sentano a proprio agio, poi scatto',
+    icon: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>,
+  },
+  {
+    label: 'Studio & aperto',
+    desc: 'A Mortara (PV) o all\'aperto — dove il tuo animale è più felice, lì fotografo',
+    icon: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>,
+  },
+]
+
+const PILLARS_BY_THEME = {
+  outdoor: PILLARS_OUTDOOR,
+  studio: PILLARS_STUDIO,
+  animals: PILLARS_ANIMALS,
+}
+
 function AboutSection({ data }: { data: LandingPageData }) {
+  const pillars = PILLARS_BY_THEME[data.aboutTheme]
   return (
-    <section className="bg-brand-off-white py-12 md:py-20" aria-label={data.about.heading}>
+    <section className="bg-brand-off-white py-12 md:py-20" aria-label="Chi sono">
       <div className="container-site">
         <div
           className="grid grid-cols-1 md:grid-cols-2 overflow-hidden reveal"
@@ -224,11 +261,11 @@ function AboutSection({ data }: { data: LandingPageData }) {
           }}
         >
           {/* Immagine */}
-          <div className="relative order-1" style={{ minHeight: '200px', maxHeight: '320px', height: '100%' }}>
-            <div className="relative w-full h-full" style={{ minHeight: '200px' }}>
+          <div className="relative order-1" style={{ minHeight: '240px', maxHeight: '380px', height: '100%' }}>
+            <div className="relative w-full h-full" style={{ minHeight: '240px' }}>
               <Image
                 src="/images/chi-siamo.jpeg"
-                alt="La famiglia Frunza — GF Memories Studio"
+                alt="Georgii — GF Memories Studio"
                 fill quality={92}
                 sizes="(max-width: 768px) 100vw, 600px"
                 className="object-cover"
@@ -239,22 +276,25 @@ function AboutSection({ data }: { data: LandingPageData }) {
             </div>
           </div>
 
-          {/* Pilastri visivi */}
-          <div className="flex flex-col gap-4 p-6 md:p-10 order-2">
+          {/* Contenuto Chi sono */}
+          <div className="flex flex-col gap-3 p-6 md:p-10 order-2">
             <span className="font-sans uppercase text-brand-blue/55" style={{ fontSize: '9px', letterSpacing: '0.24em' }}>
-              Il nostro approccio
+              Chi sono
             </span>
             <h2 className="font-serif font-semibold text-brand-text-dark" style={{ fontSize: 'clamp(1.3rem, 3vw, 2rem)' }}>
               {data.about.heading}
             </h2>
             <span className="line-gold-left" aria-hidden="true" />
+            <p className="font-sans text-brand-text-mid text-sm leading-relaxed">
+              {data.about.body}
+            </p>
 
-            {/* 2×2 grid visivo */}
-            <div className="grid grid-cols-2 gap-2.5 mt-1">
-              {APPROACH_PILLARS.map((p) => (
+            {/* 2×2 pillars adattati al tema */}
+            <div className="grid grid-cols-2 gap-2 mt-1">
+              {pillars.map((p) => (
                 <div
                   key={p.label}
-                  className="flex flex-col gap-1.5 p-3.5"
+                  className="flex flex-col gap-1.5 p-3"
                   style={{
                     background: '#F9F7F4',
                     borderRadius: '12px',
@@ -262,10 +302,10 @@ function AboutSection({ data }: { data: LandingPageData }) {
                   }}
                 >
                   <span className="text-brand-blue">{p.icon}</span>
-                  <p className="font-serif font-semibold text-brand-text-dark" style={{ fontSize: 'clamp(0.75rem, 1.8vw, 0.9rem)', lineHeight: 1.2 }}>
+                  <p className="font-serif font-semibold text-brand-text-dark" style={{ fontSize: 'clamp(0.72rem, 1.6vw, 0.85rem)', lineHeight: 1.2 }}>
                     {p.label}
                   </p>
-                  <p className="font-sans text-brand-text-light" style={{ fontSize: '11px', lineHeight: 1.4 }}>
+                  <p className="font-sans text-brand-text-light" style={{ fontSize: '10px', lineHeight: 1.4 }}>
                     {p.desc}
                   </p>
                 </div>
@@ -274,7 +314,7 @@ function AboutSection({ data }: { data: LandingPageData }) {
 
             <a href="https://wa.link/yflhc8" target="_blank" rel="noopener noreferrer"
               className="btn-primary self-start mt-2">
-              Prenota ora
+              Contattami
             </a>
           </div>
         </div>
