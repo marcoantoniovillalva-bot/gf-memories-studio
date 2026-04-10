@@ -2,9 +2,15 @@ import type { Metadata } from 'next'
 import { LandingLayout, type LandingPageData } from '@/components/gf/LandingLayout'
 
 export const metadata: Metadata = {
-  title: 'Fotografo Studio Mortara | GF Memories Studio — Ritratti & Book Professionali',
-  description: 'Sessioni fotografiche in studio a Mortara (PV). Ritratti, book professionali per LinkedIn, attori e modelli. Luce controllata, attrezzatura top. Prenota.',
-  keywords: ['fotografo studio Mortara', 'book fotografico Pavia', 'ritratti studio professionali', 'fotografo ritratti Lomellina', 'book attore Pavia', 'fotografo aziendale Mortara', 'studio fotografico Mortara'],
+  title: 'Fotografo per Book a Mortara | GF Memories Studio — Ritratti Studio Pavia',
+  description: 'Fotografo per book professionali a Mortara (PV). Book per attori, modelli, LinkedIn, ritratti aziendali. Studio con luce calibrata e post-produzione raffinata. Pavia, Garlasco, Vigevano. Prenota.',
+  keywords: ['fotografo per book', 'book fotografico Mortara', 'fotografo professionista Pavia', 'fotografo studio Mortara', 'book attore Pavia', 'ritratti studio professionali', 'fotografo aziendale Mortara', 'book modella Pavia', 'fotografo ritratti Lomellina'],
+  openGraph: {
+    title: 'Fotografo per Book a Mortara | GF Memories Studio',
+    description: 'Book fotografici professionali a Mortara (PV). Attori, modelli, LinkedIn, aziendali. Pavia, Garlasco, Vigevano.',
+    images: [{ url: '/open-graph-image.png', width: 1200, height: 630 }],
+  },
+  twitter: { card: 'summary_large_image', images: ['/open-graph-image.png'] },
 }
 
 const data: LandingPageData = {

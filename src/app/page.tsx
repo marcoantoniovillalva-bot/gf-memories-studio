@@ -6,9 +6,9 @@ import { ScrollReveal } from '@/components/gf/ScrollReveal'
 import { ScrollToTop } from '@/components/gf/ScrollToTop'
 
 export const metadata = {
-  title: 'GF Memories Studio | Fotografo Premium a Mortara — Drone & Studio',
+  title: 'GF Memories Studio | Fotografo a Mortara, Pavia — Cani, Gatti, Book, Outdoor',
   description:
-    'Fotografia professionale a Mortara (PV): outdoor, ritratti in studio, animali domestici. Drone, qualità cinematografica. Prenota la tua sessione.',
+    'Fotografo vicino a te a Mortara (PV): cani, gatti, book fotografici, outdoor con drone. Anche Pavia, Garlasco, Vigevano, Abbiategrasso. Qualità cinematografica. Prenota su WhatsApp.',
 }
 
 /* ============================================

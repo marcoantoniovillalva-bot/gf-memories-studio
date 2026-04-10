@@ -2,9 +2,15 @@ import type { Metadata } from 'next'
 import { LandingLayout, type LandingPageData } from '@/components/gf/LandingLayout'
 
 export const metadata: Metadata = {
-  title: "Fotografo all'aperto Mortara | GF Memories Studio — Luce Naturale & Drone",
-  description: "Sessioni fotografiche outdoor a Mortara e provincia di Pavia. Ritratti in luce naturale, coppie, famiglie, drone. Fotografie autentiche che emozionano. Prenota.",
-  keywords: ['fotografo outdoor Mortara', 'fotografia luce naturale Pavia', 'ritratti esterni Lomellina', 'fotografo drone Mortara', 'sessione fotografica aperto', 'fotografo coppia Pavia', 'fotografo famiglia outdoor'],
+  title: "Fotografo Outdoor a Mortara | GF Memories Studio — Famiglia, Ritratti, Drone Pavia",
+  description: "Fotografo vicino a te per sessioni outdoor a Mortara e provincia di Pavia. Ritratti in luce naturale, servizio fotografico famiglia, coppie, drone certificato. Garlasco, Vigevano, Abbiategrasso. Prenota.",
+  keywords: ['fotografo vicino a me', 'servizio fotografico famiglia', 'fotografo outdoor Mortara', 'fotografo Garlasco', 'fotografo Vigevano', 'fotografo Abbiategrasso', 'fotografo drone Mortara', 'fotografo Pavia outdoor', 'ritratti luce naturale Lomellina', 'fotografo coppia Pavia'],
+  openGraph: {
+    title: "Fotografo Outdoor a Mortara | GF Memories Studio",
+    description: "Sessioni outdoor a Mortara, Pavia, Garlasco, Vigevano, Abbiategrasso. Famiglia, ritratti, drone certificato.",
+    images: [{ url: '/open-graph-image.png', width: 1200, height: 630 }],
+  },
+  twitter: { card: 'summary_large_image', images: ['/open-graph-image.png'] },
 }
 
 const data: LandingPageData = {

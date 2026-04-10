@@ -2,9 +2,15 @@ import type { Metadata } from 'next'
 import { LandingLayout, type LandingPageData } from '@/components/gf/LandingLayout'
 
 export const metadata: Metadata = {
-  title: 'Fotografo Animali Mortara | GF Memories Studio — Pet Photography Cani & Gatti',
-  description: 'Fotografia professionale per animali domestici a Mortara (PV). Cani, gatti, sessioni indoor e outdoor. Immagini autentiche che catturano il carattere del tuo pet. Prenota.',
-  keywords: ['fotografo animali Mortara', 'pet photography Pavia', 'foto cane professionale', 'fotografo gatto Lomellina', 'sessione fotografica animali domestici', 'fotografo pet Vigevano', 'foto animali outdoor'],
+  title: 'Fotografo Cani e Gatti a Mortara | GF Memories Studio — Pet Photography Pavia',
+  description: 'Fotografo specializzato in cani e gatti a Mortara (PV). Sessioni indoor e outdoor, approccio paziente, ritratti autentici. Serviamo Pavia, Garlasco, Vigevano, Abbiategrasso. Prenota.',
+  keywords: ['fotografo cani', 'fotografo gatti', 'fotografo animali Mortara', 'fotografo cani Pavia', 'fotografo gatti Pavia', 'pet photography Lomellina', 'foto cane professionale', 'fotografo animali Garlasco', 'fotografo pet Vigevano', 'sessione fotografica animali domestici'],
+  openGraph: {
+    title: 'Fotografo Cani e Gatti a Mortara | GF Memories Studio',
+    description: 'Fotografo specializzato in cani e gatti a Mortara (PV). Sessioni indoor e outdoor. Pavia, Garlasco, Vigevano, Abbiategrasso.',
+    images: [{ url: '/open-graph-image.png', width: 1200, height: 630 }],
+  },
+  twitter: { card: 'summary_large_image', images: ['/open-graph-image.png'] },
 }
 
 const data: LandingPageData = {
