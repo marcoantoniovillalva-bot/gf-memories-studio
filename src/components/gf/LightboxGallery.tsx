@@ -56,7 +56,7 @@ export function LightboxGallery({ images }: { images: GalleryImage[] }) {
               src={img.src}
               alt={img.alt}
               fill quality={95}
-              sizes="(max-width: 640px) 33vw, (max-width: 1280px) 30vw, 420px"
+              sizes="(max-width: 768px) 33vw, 380px"
               className="object-cover transition-transform duration-700 group-hover:scale-105"
             />
             {/* Expand overlay on hover */}
