@@ -3,7 +3,7 @@ import { LandingLayout, type LandingPageData } from '@/components/gf/LandingLayo
 
 export const metadata: Metadata = {
   title: 'Fotografo per Book a Mortara | GF Memories Studio — Ritratti Studio Pavia',
-  description: 'Fotografo per book professionali a Mortara (PV). Book per attori, modelli, LinkedIn, ritratti aziendali. Studio con luce calibrata e post-produzione raffinata. Pavia, Garlasco, Vigevano. Prenota.',
+  description: 'Fotografo per book professionali a Mortara (PV). Book per attori, modelli, LinkedIn, ritratti aziendali. Studio con luce calibrata e post-produzione raffinata. Pavia, Garlasco, Vigevano. Contattami.',
   keywords: ['fotografo per book', 'book fotografico Mortara', 'fotografo professionista Pavia', 'fotografo studio Mortara', 'book attore Pavia', 'ritratti studio professionali', 'fotografo aziendale Mortara', 'book modella Pavia', 'fotografo ritratti Lomellina'],
   openGraph: {
     title: 'Fotografo per Book a Mortara | GF Memories Studio',
@@ -22,7 +22,7 @@ const data: LandingPageData = {
 
   intro: {
     heading: "La perfezione tecnica al servizio dell'emozione",
-    body: "In studio controlliamo ogni variabile — luce, sfondo, composizione — per ottenere immagini precise e allo stesso tempo umane. Ritratti aziendali, book per attori e modelli, foto per LinkedIn o uso personale: ogni sessione è progettata attorno a te.",
+    body: "In studio controllo ogni variabile — luce, sfondo, composizione — per ottenere immagini precise e allo stesso tempo umane. Ritratti aziendali, book per attori e modelli, foto per LinkedIn o uso personale: ogni sessione è progettata attorno a te.",
   },
 
   features: [
@@ -43,8 +43,8 @@ const data: LandingPageData = {
   aboutTheme: 'studio' as const,
 
   about: {
-    heading: 'Georgii — precisione e calore in studio',
-    body: "Mi chiamo Georgii e la fotografia è diventata il mio lavoro grazie alla passione e al sostegno di mia moglie Silvana, che non ha mai smesso di credere in me. Il mio studio a Mortara, in provincia di Pavia, è un luogo pensato per metterti a tuo agio: professionale nei dettagli, umano nell\'approccio. Realizzo book, ritratti, servizi per gravidanza, battesimi, comunioni e ogni ricorrenza importante. Spero di toccare le tue emozioni con le mie immagini.",
+    heading: 'Giorgio — precisione e calore in studio',
+    body: "Mi chiamo Giorgio e la fotografia è diventata il mio lavoro grazie alla passione e al sostegno di mia moglie Silvana, che non ha mai smesso di credere in me. Il mio studio a Mortara, in provincia di Pavia, è un luogo pensato per metterti a tuo agio: professionale nei dettagli, umano nell'approccio. Realizzo book, ritratti, servizi per gravidanza, battesimi, comunioni e ogni ricorrenza importante. Spero di toccare le tue emozioni con le mie immagini.",
     image: '/images/fotografia-studio.jpeg',
     imageAlt: 'Studio fotografico professionale GF Memories',
   },
@@ -73,7 +73,7 @@ const data: LandingPageData = {
   faq: [
     {
       q: "Cosa posso fotografare in studio?",
-      a: "Ritratti personali, book professionali per attori e modelli, foto per LinkedIn e uso aziendale, servizi maternity, boudoir e molto altro. Contattaci per discutere il tuo progetto.",
+      a: "Ritratti personali, book professionali per attori e modelli, foto per LinkedIn e uso aziendale, servizi maternity, boudoir e molto altro. Contattami per discutere il tuo progetto.",
     },
     {
       q: "Quanto dura una sessione in studio?",
@@ -81,25 +81,25 @@ const data: LandingPageData = {
     },
     {
       q: "Come mi devo preparare?",
-      a: "Ti consiglieremo su abbigliamento e preparazione prima della sessione. In generale: riposa bene la notte prima, vesti qualcosa in cui ti senti autentico e porta più cambi se vuoi varietà.",
+      a: "Ti consiglierò su abbigliamento e preparazione prima della sessione. In generale: riposa bene la notte prima, vesti qualcosa in cui ti senti autentico e porta più cambi se vuoi varietà.",
     },
     {
       q: "Le foto vengono ritoccate?",
-      a: "Sì. La post-produzione è inclusa e curata nel dettaglio. Correggiamo luce, colori e dettagli per un risultato finale raffinato ma naturale.",
+      a: "Sì. La post-produzione è inclusa e curata nel dettaglio. Correggo luce, colori e dettagli per un risultato finale raffinato ma naturale.",
     },
     {
       q: "Posso usare le foto per uso commerciale?",
-      a: "Sì. Forniamo le immagini in alta risoluzione adatte a qualsiasi uso — stampa, web, portfolio, social. I diritti d'uso sono inclusi per uso personale e professionale.",
+      a: "Sì. Fornisco le immagini in alta risoluzione adatte a qualsiasi uso — stampa, web, portfolio, social. I diritti d'uso sono inclusi per uso personale e professionale.",
     },
     {
-      q: "Siete attrezzati per riprese video in studio?",
-      a: "Sì, offriamo anche servizi video in studio. Contattateci per maggiori dettagli e preventivi personalizzati.",
+      q: "Sei attrezzato per riprese video in studio?",
+      a: "Sì, offro anche servizi video in studio. Contattami per maggiori dettagli e un preventivo personalizzato.",
     },
   ],
 
-  mapsLabel: 'Il nostro studio a Mortara',
+  mapsLabel: 'Il mio studio a Mortara',
   ctaHeading: 'Il tuo ritratto perfetto ti aspetta',
-  ctaBody: "Prenota su WhatsApp. Discutiamo insieme l'idea e creiamo qualcosa che ti rappresenti davvero.",
+  ctaBody: "Scrivimi su WhatsApp. Parliamo insieme dell'idea e creiamo qualcosa che ti rappresenti davvero.",
 }
 
 export default function FotografiaStudioPage() {

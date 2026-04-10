@@ -217,7 +217,7 @@ function QuoteStrip() {
 
 function ServicesSection() {
   return (
-    <section id="servizi" className="bg-white pb-16 md:pb-20 pt-3 md:pt-14" aria-label="I nostri servizi fotografici">
+    <section id="servizi" className="bg-white pb-16 md:pb-20 pt-3 md:pt-14" aria-label="I miei servizi fotografici">
       <div className="container-site">
         <div className="text-center mb-6 md:mb-10 reveal">
           <span className="font-sans uppercase text-brand-blue/55" style={{ fontSize: '9px', letterSpacing: '0.24em' }}>
@@ -225,7 +225,7 @@ function ServicesSection() {
           </span>
           <h2 className="font-serif font-semibold text-brand-text-dark mt-2 mb-3"
             style={{ fontSize: 'clamp(1.4rem, 3.5vw, 2.4rem)', letterSpacing: '0.04em' }}>
-            I nostri servizi
+            I miei servizi
           </h2>
           <span className="line-gold" aria-hidden="true" />
         </div>

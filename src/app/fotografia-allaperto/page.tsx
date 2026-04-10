@@ -3,7 +3,7 @@ import { LandingLayout, type LandingPageData } from '@/components/gf/LandingLayo
 
 export const metadata: Metadata = {
   title: "Fotografo Outdoor a Mortara | GF Memories Studio — Famiglia, Ritratti, Drone Pavia",
-  description: "Fotografo vicino a te per sessioni outdoor a Mortara e provincia di Pavia. Ritratti in luce naturale, servizio fotografico famiglia, coppie, drone certificato. Garlasco, Vigevano, Abbiategrasso. Prenota.",
+  description: "Fotografo outdoor a Mortara e provincia di Pavia. Ritratti in luce naturale, servizio fotografico famiglia, coppie, drone certificato. Garlasco, Vigevano, Abbiategrasso. Contattami.",
   keywords: ['fotografo vicino a me', 'servizio fotografico famiglia', 'fotografo outdoor Mortara', 'fotografo Garlasco', 'fotografo Vigevano', 'fotografo Abbiategrasso', 'fotografo drone Mortara', 'fotografo Pavia outdoor', 'ritratti luce naturale Lomellina', 'fotografo coppia Pavia'],
   openGraph: {
     title: "Fotografo Outdoor a Mortara | GF Memories Studio",
@@ -22,12 +22,12 @@ const data: LandingPageData = {
 
   intro: {
     heading: 'La luce giusta cambia tutto',
-    body: "Non c'è studio che possa eguagliare il calore del sole al tramonto o la morbidezza di una giornata nuvolosa. La fotografia outdoor coglie la luce vera — e trasforma momenti ordinari in immagini che restano. Ritratti romantici, sessioni di famiglia, book in contesti suggestivi: siamo lì con te.",
+    body: "Non c'è studio che possa eguagliare il calore del sole al tramonto o la morbidezza di una giornata nuvolosa. La fotografia outdoor coglie la luce vera — e trasforma momenti ordinari in immagini che restano. Ritratti romantici, sessioni di famiglia, book in contesti suggestivi: sono lì con te.",
   },
 
   features: [
     { label: 'Luce Naturale', desc: 'Golden hour, nuvole morbide, colori autentici — la luce che nessuno studio può replicare.' },
-    { label: 'Location su Misura', desc: 'Campi dorati, borghi storici, riva del fiume — scegliamo insieme il posto perfetto.' },
+    { label: 'Location su Misura', desc: 'Campi dorati, borghi storici, riva del fiume — scelgo insieme a te il posto perfetto.' },
     { label: 'Drone Certificato', desc: 'Prospettive aeree uniche che trasformano ogni paesaggio in qualcosa di straordinario.' },
   ],
 
@@ -43,8 +43,8 @@ const data: LandingPageData = {
   aboutTheme: 'outdoor' as const,
 
   about: {
-    heading: 'Georgii — dietro l\'obiettivo, all\'aperto',
-    body: "Mi chiamo Georgii e ho sempre avuto la passione per la fotografia. Grazie a mia moglie Silvana, che ha sempre creduto in me, ho avuto la determinazione di trasformare questa passione in un lavoro vero. Opero a Mortara, in provincia di Pavia — facilmente raggiungibile da Milano anche coi mezzi pubblici — e sono disponibile per trasferte, anche all\'estero. Le aree verdi della Lomellina sono il mio palcoscenico preferito per immortalare fidanzamenti, matrimoni, gravidanze e tutti i momenti che contano.",
+    heading: "Giorgio — dietro l'obiettivo, all'aperto",
+    body: "Mi chiamo Giorgio e ho sempre avuto la passione per la fotografia. Grazie a mia moglie Silvana, che ha sempre creduto in me, ho avuto la determinazione di trasformare questa passione in un lavoro vero. Opero a Mortara, in provincia di Pavia — facilmente raggiungibile da Milano anche coi mezzi pubblici — e sono disponibile per trasferte, anche all'estero. Le aree verdi della Lomellina sono il mio palcoscenico preferito per immortalare fidanzamenti, matrimoni, gravidanze e tutti i momenti che contano.",
     image: '/images/fotografia-aperto.jpeg',
     imageAlt: "Fotografo all'aperto in azione — GF Memories Studio",
   },
@@ -65,7 +65,7 @@ const data: LandingPageData = {
     {
       author: 'Alessia B.',
       location: 'Pavia',
-      text: "Le foto con il drone hanno reso tutto magico. Non avrei mai immaginato un risultato così bello. Assolutamente consigliatissimi per qualsiasi occasione.",
+      text: "Le foto con il drone hanno reso tutto magico. Non avrei mai immaginato un risultato così bello. Assolutamente consigliatissimo per qualsiasi occasione.",
       rating: 5,
     },
   ],
@@ -73,33 +73,33 @@ const data: LandingPageData = {
   faq: [
     {
       q: "Quanto costa una sessione fotografica all'aperto?",
-      a: "Il costo varia in base alla durata e alle specifiche della sessione. Contattaci su WhatsApp per ricevere un preventivo personalizzato senza impegno.",
+      a: "Il costo varia in base alla durata e alle specifiche della sessione. Contattami su WhatsApp per ricevere un preventivo personalizzato senza impegno.",
     },
     {
       q: "Cosa succede se il giorno della sessione c'è cattivo tempo?",
-      a: "Nessun problema: spostiamo la data a costo zero. La luce è tutto nella fotografia outdoor e non scenderemo a compromessi sulla qualità.",
+      a: "Nessun problema: spostiamo la data a costo zero. La luce è tutto nella fotografia outdoor e non scendo a compromessi sulla qualità.",
     },
     {
       q: "Dove si svolgono le sessioni outdoor?",
-      a: "Lavoriamo a Mortara, Vigevano, Pavia e in tutta la Lomellina. Scegliamo insieme la location: campagna, borghi storici, rive del Ticino o location personali.",
+      a: "Lavoro a Mortara, Vigevano, Pavia e in tutta la Lomellina. Scelgo insieme a te la location: campagna, borghi storici, rive del Ticino o luoghi personali.",
     },
     {
       q: "Quante foto ricevo al termine della sessione?",
-      a: "Selezioniamo e ritocchiamo le migliori immagini della sessione. Riceverai una galleria digitale ad alta risoluzione, pronta da stampare o condividere.",
+      a: "Seleziono e ritocco le migliori immagini della sessione. Riceverai una galleria digitale ad alta risoluzione, pronta da stampare o condividere.",
     },
     {
       q: "Il drone è incluso nel servizio?",
-      a: "Le riprese con drone sono disponibili come aggiunta alla sessione standard. Ci occupiamo di tutte le autorizzazioni necessarie.",
+      a: "Le riprese con drone sono disponibili come aggiunta alla sessione standard. Mi occupo di tutte le autorizzazioni necessarie.",
     },
     {
       q: "Come mi devo preparare per la sessione?",
-      a: "Non esiste una regola fissa: vesti come ti senti a tuo agio. Possiamo aiutarti con qualche consiglio sulle palette colori prima della sessione.",
+      a: "Non esiste una regola fissa: vesti come ti senti a tuo agio. Posso aiutarti con qualche consiglio sulle palette colori prima della sessione.",
     },
   ],
 
   mapsLabel: 'Studio a Mortara, shooting ovunque',
   ctaHeading: 'Il tuo momento merita di essere immortalato',
-  ctaBody: "Scrivici su WhatsApp e raccontaci la tua idea. Troviamo insieme la luce e il posto perfetti — risposta entro poche ore.",
+  ctaBody: "Scrivimi su WhatsApp e raccontami la tua idea. Troviamo insieme la luce e il posto perfetti — risposta entro poche ore.",
 }
 
 export default function FotografiaAllapertoPage() {

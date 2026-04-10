@@ -159,7 +159,7 @@ function GallerySection({ images }: { images: GalleryImage[] }) {
         <div className="text-center mb-6 reveal">
           <span className="font-sans uppercase text-brand-blue/55" style={{ fontSize: '9px', letterSpacing: '0.24em' }}>Galleria</span>
           <h2 className="font-serif font-semibold text-brand-text-dark mt-2" style={{ fontSize: 'clamp(1.3rem, 3vw, 2rem)' }}>
-            I nostri scatti
+            I miei scatti
           </h2>
           <span className="line-gold mt-3 block mx-auto" aria-hidden="true" />
         </div>
@@ -265,7 +265,7 @@ function AboutSection({ data }: { data: LandingPageData }) {
             <div className="relative w-full h-full" style={{ minHeight: '240px' }}>
               <Image
                 src="/images/chi-siamo.jpeg"
-                alt="Georgii — GF Memories Studio"
+                alt="Giorgio — GF Memories Studio"
                 fill quality={92}
                 sizes="(max-width: 768px) 100vw, 600px"
                 className="object-cover"
